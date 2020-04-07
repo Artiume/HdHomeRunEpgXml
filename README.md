@@ -19,21 +19,14 @@ By default, the program will download **Two Weeks** of programming.
 
 This repository includes a Dockerfile that will build an Alpine Linux Docker image that includes all the dependencies to run the `hdhomerun.py` script to generate the hdhomerun.xml file.
 
-`git clone https://github.com/Artiume/HdHomeRunEpgXml.git`<br>
-`cd HdHomeRunEpgXml/Docker`<br>
-`docker build -t artiume/hdhrxml .`
-
 Steps to use:
 
-* Make sure you have docker installed and available in your `$PATH`.
-* Download the `Dockerfile` file in the ./Docker to an empty directory.
-* Change into the new directory with the Dockerfile in it.
-* Run `docker build -t hdhomerunepgxml .` (don't miss the ".")
-* Run `docker run --rm hdhomerunepgxml > /[directory]/hdhomerun.xml` where [directory] is the place you want the file stored.
+* Make sure you have docker and git installed.
+* `git clone https://github.com/Artiume/HdHomeRunEpgXml.git` Download the repo 
+* `cd HdHomeRunEpgXml/Docker` Change into the new directory with the Dockerfile in it. 
+* `docker build -t artiume/hdhrxml .` (don't miss the ".")
+* Run `docker run --rm artiume/hdhrxml > /$DIRECTORY/hdhomerun.xml` where $DIRECTORY is the place you want the file stored.
 You can schedule the docker run command above as a cronjob.
-
-
-
 
 
 **Fairfield Tek L.L.C.**
